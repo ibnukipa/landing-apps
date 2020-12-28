@@ -52,7 +52,7 @@ const Header = ({ title, hasSearch }: HeaderProps) => {
           isClear
           placeholder={'Search'}
           onChange={(keyword) => setKeyword(keyword)}
-          onClear={() => {}}
+          onClear={() => setKeyword('')}
           value={keyword}
         />
       )}
