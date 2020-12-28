@@ -6,18 +6,29 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Sizes from '@constants/sizes';
-import { MenuItem } from '@components/menu/MenuItem';
+import { MenuSnippet } from '@components/snippet/MenuSnippet';
+import { take } from 'lodash-es';
+import { MAIN_MENU } from '@constants/dummy';
+import Colors from '@constants/colors';
+
+const CURRENT_MENU = take(MAIN_MENU, 9);
+CURRENT_MENU.push({
+  id: 10,
+  name: 'All Products',
+  icon: 'apps',
+  color: Colors.gray,
+  iconColor: Colors.black,
+});
 
 type MenuContainerProps = {
-  items: Array<{ id: string, name: string, icon: string, color: string, iconColor: string }>,
   countPerRow?: number,
 };
 
-export const MenuContainer = ({ items = [], countPerRow = 5 }: MenuContainerProps) => {
+export const MenuContainer = ({ countPerRow = 5 }: MenuContainerProps) => {
   return (
     <View style={styles.container}>
-      {items.map((menu) => (
-        <MenuItem
+      {CURRENT_MENU.map((menu) => (
+        <MenuSnippet
           key={menu.id}
           id={menu.id}
           name={menu.name}

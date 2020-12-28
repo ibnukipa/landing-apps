@@ -13,14 +13,24 @@ export const MAIN_MENU = [
 ];
 
 export const SUB_MENU = [
-  { id: 1, name: 'PayLater Card', icon: '' },
-  { id: 2, name: 'Bills & Top-up', icon: '' },
-  { id: 3, name: 'Insurance', icon: '' },
-  { id: 4, name: 'Airport Transfer', icon: '' },
-  { id: 5, name: 'Gift Voucher', icon: '' },
-  { id: 6, name: 'JR Pass', icon: '' },
-  { id: 7, name: 'International Data Plans', icon: '' },
-  { id: 8, name: 'Flight Status', icon: '' },
-  { id: 9, name: 'Budget Planner', icon: '' },
-  { id: 10, name: 'Price Alert', icon: '' },
+  { id: 1, name: 'PayLater Card', icon: 'card' },
+  { id: 2, name: 'Bills & Top-up', icon: 'newspaper' },
+  { id: 3, name: 'Insurance', icon: 'analytics' },
+  { id: 4, name: 'Airport Transfer', icon: 'car' },
+  { id: 5, name: 'Gift Voucher', icon: 'barcode' },
+  { id: 6, name: 'JR Pass', icon: 'compass' },
+  { id: 7, name: 'International Data Plans', icon: 'cellular' },
+  { id: 8, name: 'Flight Status', icon: 'airplane' },
+  { id: 9, name: 'Budget Planner', icon: 'browsers' },
+  { id: 10, name: 'Price Alert', icon: 'notifications' },
+];
+
+export const NOTICE = [
+  { id: 1, title: 'COVID-19 Test & Other Requirements for Year-end Travels', position: 'end', align: 'right' },
+  { id: 2, title: 'Updated Information for Trains Trip' },
+  { id: 3, title: 'Updated Information for Buses & Shuttle Trip', position: 'end' },
+  { id: 4, title: 'Travel Credits: General Info & How to Redeem', align: 'right' },
+  { id: 5, title: 'Your Refund & Reschedule Queries' },
+  { id: 6, title: 'Latest Info on Xperience Bookings', position: 'end' },
+  { id: 7, title: 'International Flight Routes Info', position: 'end', align: 'right' },
 ];

@@ -10,7 +10,7 @@ import Colors from '@constants/colors';
 import { Text } from '@components/Text';
 import Sizes from '@constants/sizes';
 
-type MenuItemProps = {
+type MenuSnippetProps = {
   id: string,
   color: string,
   icon: string,
@@ -19,7 +19,14 @@ type MenuItemProps = {
   countPerRow?: number,
 };
 
-export const MenuItem = ({ id, color, icon, iconColor, name, countPerRow = 5 }: MenuItemProps) => {
+export const MenuSnippet = ({
+  id,
+  color,
+  icon,
+  iconColor,
+  name,
+  countPerRow = 5,
+}: MenuSnippetProps) => {
   const { width } = useWindowDimensions();
   const [itemDimension] = useState(width / countPerRow);
   const [iconDimension] = useState(width / countPerRow - Sizes.small * 3);

@@ -22,6 +22,7 @@ export type TextProps = {
   bold?: boolean,
   bolder?: boolean,
   size?: SizeTypes,
+  align?: string,
 } & RNTextProps;
 
 export const Text = ({
@@ -37,6 +38,7 @@ export const Text = ({
   bold,
   bolder,
   size = 'regular',
+  align = 'left',
   children,
   ...restProps
 }: TextProps) => {
@@ -46,6 +48,9 @@ export const Text = ({
       style={[
         styles.text,
         color && { color },
+        align && {
+          textAlign: align,
+        },
         italic && styles.italic,
         centered && styles.center,
         underline && styles.underline,
