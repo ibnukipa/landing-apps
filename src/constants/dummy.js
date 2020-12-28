@@ -90,6 +90,29 @@ export const COVID_TEST = [
   },
 ];
 
+export const MORE_POINTS = [
+  {
+    id: 1,
+    title: 'Win Travelling SUltan worth of Rp30Mio',
+    price: '65.000 Points',
+  },
+  {
+    id: 2,
+    title: 'Win 5 Star Sultan worth of Rp30Mio',
+    price: '50.000 Points',
+  },
+  {
+    id: 3,
+    title: 'Win Culinary Sultan worth of Rp30Mio',
+    price: '40.000 Points',
+  },
+  {
+    id: 4,
+    title: 'Win Experience Sultan worth of Rp30Mio',
+    price: '40.000 Points',
+  },
+];
+
 export const NEW_YEAR = [
   { id: 1, city: 'Bandung', place: 'Ethereal Lake', location: 'White Crater' },
   { id: 2, city: 'Padang', place: 'Azure Sky', location: 'PDKIM Padang Panjang' },
