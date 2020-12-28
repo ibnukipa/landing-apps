@@ -120,6 +120,7 @@ export const ACTIVITIES = [
     saved: 'Save 50%',
     priceDiscount: 'Rp 175.000',
     price: 'Rp 87.500',
+    mainCategory: 'Fun Activities',
   },
   {
     id: 2,
@@ -127,6 +128,7 @@ export const ACTIVITIES = [
     saved: 'Save 50%',
     priceDiscount: 'Rp 200.000',
     price: 'Rp 100.000',
+    mainCategory: 'Relax & Stay Healthy',
   },
   {
     id: 3,
@@ -134,6 +136,7 @@ export const ACTIVITIES = [
     saved: 'Save 50%',
     priceDiscount: 'Rp 198.000',
     price: 'Rp 99.000',
+    mainCategory: 'Fun Activities',
   },
   {
     id: 4,
@@ -141,6 +144,23 @@ export const ACTIVITIES = [
     saved: 'Save 50%',
     priceDiscount: 'Rp 140.000',
     price: 'Rp 70.000',
+    mainCategory: 'Relax & Stay Healthy',
+  },
+  {
+    id: 6,
+    title: 'J-Sky Ferris Wheel Tickets',
+    saved: 'Save 19%',
+    priceDiscount: 'Rp 60.000',
+    price: 'Rp 48.875',
+    mainCategory: 'Relax & Stay Healthy',
+  },
+  {
+    id: 7,
+    title: 'Homecare 24 by Primecare Clinic',
+    saved: 'Save 50%',
+    priceDiscount: 'Rp 150.000',
+    price: 'Rp 75.000',
+    mainCategory: 'Relax & Stay Healthy',
   },
 ];
 
