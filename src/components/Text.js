@@ -1,0 +1,95 @@
+/**
+ * @format
+ * @flow strict-local
+ */
+
+import React, { Node } from 'react';
+import { Text as RNText, StyleSheet, TextProps as RNTextProps } from 'react-native';
+import type { SizeTypes } from '@constants/sizes';
+import Sizes from "@constants/sizes";
+
+export type TextProps = {
+  children: Node,
+  style?: StyleSheet.Style,
+  color?: string,
+  italic?: boolean,
+  underline?: boolean,
+  lighter?: boolean,
+  light?: boolean,
+  medium?: boolean,
+  bold?: boolean,
+  bolder?: boolean,
+  size?: SizeTypes,
+} & RNTextProps;
+
+const Text = (props: TextProps) => {
+  const {
+    onPress,
+    style,
+    color,
+    italic,
+    underline,
+    lighter,
+    light,
+    medium,
+    bold,
+    bolder,
+    size,
+    children,
+    ...restProps
+  } = props;
+
+  return (
+    <RNText
+      onPress={onPress}
+      style={[
+        styles.text,
+        color && { color },
+        italic && styles.italic,
+        underline && styles.underline,
+        lighter && styles.lighter,
+        light && styles.light,
+        medium && styles.medium,
+        bold && styles.bold,
+        bolder && styles.bolder,
+        size && {
+          fontSize: Sizes[size],
+        },
+        style,
+      ]}
+      {...restProps}
+      allowFontScaling={false}
+    >
+      {children}
+    </RNText>
+  );
+};
+
+const styles = StyleSheet.create({
+  text: {
+    fontFamily: 'Roboto',
+  },
+  lighter: {
+    fontFamily: 'Roboto-Thin',
+  },
+  light: {
+    fontFamily: 'Roboto-Light',
+  },
+  medium: {
+    fontFamily: 'Roboto-Medium',
+  },
+  bold: {
+    fontFamily: 'Roboto-Bold',
+  },
+  bolder: {
+    fontFamily: 'Roboto-Black',
+  },
+  italic: {
+    fontStyle: 'italic',
+  },
+  underline: {
+    textDecorationLine: 'underline',
+  },
+});
+
+export default Text;
