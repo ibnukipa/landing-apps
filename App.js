@@ -3,22 +3,19 @@
  * @flow strict-local
  */
 
-import React from 'react';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import React, { useEffect } from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import RNBootSplash from 'react-native-bootsplash';
 
-import Text from '@components/Text';
+import { Dashboard } from '@screens/Dashboard';
 
 const App: () => React$Node = () => {
+  useEffect(() => {
+    RNBootSplash.hide({ duration: 250, fade: true });
+  }, []);
   return (
     <SafeAreaProvider>
-      <SafeAreaView>
-        <Text lighter>Regular</Text>
-        <Text light>Regular</Text>
-        <Text>Regular</Text>
-        <Text medium>Regular</Text>
-        <Text bold>Regular</Text>
-        <Text bolder>Regular</Text>
-      </SafeAreaView>
+      <Dashboard />
     </SafeAreaProvider>
   );
 };
