@@ -15,7 +15,8 @@ import { NoticeContainer } from '@components/container/NoticeContainer';
 import { CovidTestContainer } from '@components/container/CovidTestContainer';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { NewYearContainer } from '@components/container/NewYearContainer';
-import { PointsContainer } from "@components/container/PointsContainer";
+import { PointsContainer } from '@components/container/PointsContainer';
+import { ActivitiesContainer } from '@components/container/ActivitiesContainer';
 
 export const Dashboard = () => {
   const insets = useSafeAreaInsets();
@@ -33,6 +34,7 @@ export const Dashboard = () => {
         <CovidTestContainer />
         <NewYearContainer />
         <PointsContainer />
+        <ActivitiesContainer />
       </ScrollView>
     </Container>
   );

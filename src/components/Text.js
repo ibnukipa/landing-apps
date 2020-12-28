@@ -16,6 +16,7 @@ export type TextProps = {
   italic?: boolean,
   centered?: boolean,
   underline?: boolean,
+  lineThrough?: boolean,
   lighter?: boolean,
   light?: boolean,
   medium?: boolean,
@@ -32,6 +33,7 @@ export const Text = ({
   italic,
   centered,
   underline,
+  lineThrough,
   lighter,
   light,
   medium,
@@ -54,6 +56,7 @@ export const Text = ({
         italic && styles.italic,
         centered && styles.center,
         underline && styles.underline,
+        lineThrough && styles.lineThrough,
         lighter && styles.lighter,
         light && styles.light,
         medium && styles.medium,
@@ -96,6 +99,9 @@ const styles = StyleSheet.create({
   },
   underline: {
     textDecorationLine: 'underline',
+  },
+  lineThrough: {
+    textDecorationLine: 'line-through',
   },
   center: {
     textAlign: 'center',

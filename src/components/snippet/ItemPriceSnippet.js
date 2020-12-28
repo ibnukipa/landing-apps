@@ -11,18 +11,28 @@ import Sizes from '@constants/sizes';
 import { Icon } from '@components/Icon';
 import { Divider } from '@components/Divider';
 import Spaces from '@constants/spaces';
+import { PriceTag } from '@components/PriceTag';
 
 type CovidTestSnippetProps = {
-  title: string,
-  tag: string,
-  price: string,
+  title?: string,
+  tag?: string,
+  price?: string,
+  priceDiscount?: string,
+  saved?: string,
 };
 
-export const ItemPriceSnippet = ({ title, tag, price }: CovidTestSnippetProps) => {
+export const ItemPriceSnippet = ({
+  title,
+  tag,
+  price,
+  priceDiscount,
+  saved,
+}: CovidTestSnippetProps) => {
   return (
     <View style={styles.container}>
       <View style={[styles.image]}>
         <Icon color={Colors.blueGray} />
+        {saved && <PriceTag value={saved} />}
       </View>
       {title && (
         <>
@@ -36,6 +46,14 @@ export const ItemPriceSnippet = ({ title, tag, price }: CovidTestSnippetProps) =
         <>
           <Text numberOfLines={1} size={'small'}>
             {tag}
+          </Text>
+          <Divider space={Spaces.extraSmall} />
+        </>
+      )}
+      {priceDiscount && (
+        <>
+          <Text lineThrough numberOfLines={1} size={'small'}>
+            {priceDiscount}
           </Text>
           <Divider space={Spaces.extraSmall} />
         </>
