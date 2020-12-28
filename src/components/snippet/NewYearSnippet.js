@@ -8,7 +8,6 @@ import { StyleSheet, useWindowDimensions, View } from 'react-native';
 import Colors from '@constants/colors';
 import { Text } from '@components/Text';
 import Sizes from '@constants/sizes';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Divider } from '@components/Divider';
 import { Icon } from '@components/Icon';
 
@@ -36,7 +35,9 @@ export const NewYearSnippet = ({ city, place, location }: NewYearSnippetProps) =
       </View>
       <View style={styles.metadata}>
         <Icon size={'extraSmall'} color={Colors.white} name="location-outline" />
-        <Text size={'small'} medium color={Colors.white}>{location}</Text>
+        <Text size={'small'} medium color={Colors.white}>
+          {location}
+        </Text>
       </View>
     </View>
   );
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
     borderRadius: Sizes.extraSmall,
     padding: Sizes.regular,
     margin: Sizes.large / 2,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   metadata: {
     flexDirection: 'row',

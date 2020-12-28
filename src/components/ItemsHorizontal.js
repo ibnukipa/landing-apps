@@ -5,10 +5,9 @@
 
 import React from 'react';
 import { FlatList, View, StyleSheet } from 'react-native';
-import { Text } from '@components/Text';
 import Sizes from '@constants/sizes';
-import Colors from '@constants/colors';
 import { Divider } from '@components/Divider';
+import { ItemsHeader } from '@components/ItemsHeader';
 
 type ItemsVerticalProps = {
   items: Array<{ title: string, description: string }>,
@@ -18,6 +17,7 @@ type ItemsVerticalProps = {
   header?: {
     title: string,
     description: string,
+    hasMore?: boolean,
   },
 };
 
@@ -30,17 +30,7 @@ export const ItemsHorizontal = ({
 }: ItemsVerticalProps) => {
   return (
     <View style={styles.container}>
-      {header && (
-        <View style={styles.header}>
-          <Text numberOfLines={1} size={'extraLarge'} medium color={Colors.black}>
-            {header.title}
-          </Text>
-          <Divider space={Sizes.extraSmall} />
-          <Text numberOfLines={2} color={Colors.blueGray400}>
-            {header.description}
-          </Text>
-        </View>
-      )}
+      {header && <ItemsHeader {...header} />}
       <FlatList
         horizontal
         removeClippedSubviews={false}
@@ -59,9 +49,5 @@ export const ItemsHorizontal = ({
 const styles = StyleSheet.create({
   container: {
     paddingVertical: Sizes.regular,
-  },
-  header: {
-    paddingHorizontal: Sizes.large,
-    marginBottom: Sizes.smaller,
   },
 });

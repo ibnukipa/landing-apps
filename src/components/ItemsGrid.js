@@ -8,7 +8,9 @@ import { FlatList, View, StyleSheet } from 'react-native';
 import { Text } from '@components/Text';
 import Sizes from '@constants/sizes';
 import Colors from '@constants/colors';
-import { Divider } from "@components/Divider";
+import { Divider } from '@components/Divider';
+import { Icon } from '@components/Icon';
+import { ItemsHeader } from "@components/ItemsHeader";
 
 type ItemsGridProps = {
   items: Array<{ title: string, description: string }>,
@@ -18,6 +20,7 @@ type ItemsGridProps = {
   header?: {
     title: string,
     description: string,
+    hasMore?: boolean,
   },
   contentStyle?: StyleSheet.style,
 };
@@ -32,17 +35,7 @@ export const ItemsGrid = ({
 }: ItemsGridProps) => {
   return (
     <View style={[styles.container, { backgroundColor }]}>
-      {header && (
-        <View style={styles.header}>
-          <Text numberOfLines={1} size={'extraLarge'} medium color={Colors.black}>
-            {header.title}
-          </Text>
-          <Divider space={Sizes.extraSmall} />
-          <Text numberOfLines={2} color={Colors.blueGray400}>
-            {header.description}
-          </Text>
-        </View>
-      )}
+      {header && <ItemsHeader {...header} />}
       <FlatList
         numColumns={2}
         removeClippedSubviews={false}
@@ -60,9 +53,5 @@ export const ItemsGrid = ({
 const styles = StyleSheet.create({
   container: {
     paddingVertical: Sizes.regular,
-  },
-  header: {
-    paddingHorizontal: Sizes.large,
-    marginBottom: Sizes.small,
   },
 });

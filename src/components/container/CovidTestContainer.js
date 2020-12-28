@@ -22,6 +22,7 @@ export const CovidTestContainer = ({}: CovidTestContainerProps) => {
       header={{
         title: 'Book Antigen & PCR Test With Ease',
         description: 'Get your health checked and fulfill your traveling needs',
+        hasMore: true,
       }}
       items={COVID_TEST}
       keyExtractor={renderItemKey}
