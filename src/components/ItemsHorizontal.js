@@ -47,13 +47,15 @@ export const ItemsHorizontal = ({
     },
     [selectedKey, onChangeSelector]
   );
+  const renderItemKey = useCallback((item) => item, []);
   return (
     <View style={styles.container}>
       {header && <ItemsHeader {...header} />}
       <FlatList
-        data={selectors}
-        renderItem={renderItemSelector}
         horizontal
+        data={selectors}
+        keyExtractor={renderItemKey}
+        renderItem={renderItemSelector}
         contentContainerStyle={contentStyle}
       />
       <FlatList
