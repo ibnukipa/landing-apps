@@ -7,6 +7,7 @@ import React, { Node } from 'react';
 import { Text as RNText, StyleSheet, TextProps as RNTextProps } from 'react-native';
 import type { SizeTypes } from '@constants/sizes';
 import Sizes from '@constants/sizes';
+import Colors from '@constants/colors';
 
 export type TextProps = {
   children: Node,
@@ -25,7 +26,7 @@ export type TextProps = {
 export const Text = ({
   onPress,
   style,
-  color,
+  color = Colors.blueGray600,
   italic,
   underline,
   lighter,

@@ -19,14 +19,12 @@ export const Container = ({ children, hasHeader = false, content = 'dark' }: Con
   const insets = useSafeAreaInsets();
   return (
     <View style={[styles.container, !hasHeader && { marginTop: insets.top }]}>
-      <KeyboardAware>
-        <StatusBar
-          translucent
-          barStyle={`${content}-content`}
-          backgroundColor={hasHeader ? Colors.transparent : Colors.white}
-        />
-        {children}
-      </KeyboardAware>
+      <StatusBar
+        translucent
+        barStyle={`${content}-content`}
+        backgroundColor={hasHeader ? Colors.transparent : Colors.white}
+      />
+      {children}
     </View>
   );
 };
