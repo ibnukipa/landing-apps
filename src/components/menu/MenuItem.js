@@ -22,7 +22,7 @@ type MenuItemProps = {
 export const MenuItem = ({ id, color, icon, iconColor, name, countPerRow = 5 }: MenuItemProps) => {
   const { width } = useWindowDimensions();
   const [itemDimension] = useState(width / countPerRow);
-  const [iconDimension] = useState(width / countPerRow - Sizes.small * 2);
+  const [iconDimension] = useState(width / countPerRow - Sizes.small * 3);
   return (
     <View style={[styles.container, { width: itemDimension }]}>
       <View style={styles.content}>
@@ -32,7 +32,7 @@ export const MenuItem = ({ id, color, icon, iconColor, name, countPerRow = 5 }: 
             { width: iconDimension, height: iconDimension, backgroundColor: color },
           ]}
         >
-          <Icon name={icon} size={'larger'} color={iconColor || Colors.white} />
+          <Icon name={icon} size={'small'} color={iconColor || Colors.white} />
         </View>
         <Text size={'small'} light color={Colors.black} centered>
           {name}
