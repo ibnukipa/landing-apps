@@ -30,7 +30,7 @@ export const Label = ({ text, iconName = 'contrast', iconType, isLight = false }
   }, [isLight]);
 
   return (
-    <Touchable style={[styles.container, { backgroundColor: bgColor() }]}>
+    <Touchable onPress={() => {}} style={[styles.container, { backgroundColor: bgColor() }]}>
       <Icon color={icColor()} name={iconName} type={iconType} />
       <Text style={styles.text} medium color={textColor()} size={'small'}>
         {text}

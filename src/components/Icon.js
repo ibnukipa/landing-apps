@@ -20,6 +20,7 @@ export type IconProps = {
   name?: string,
   onPress?: Function,
   size?: SizeTypes,
+  color?: string,
   type?: $Keys<typeof TYPES>,
 };
 

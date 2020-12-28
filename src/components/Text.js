@@ -14,13 +14,16 @@ export type TextProps = {
   style?: StyleSheet.Style,
   color?: string,
   italic?: boolean,
+  centered?: boolean,
   underline?: boolean,
+  lineThrough?: boolean,
   lighter?: boolean,
   light?: boolean,
   medium?: boolean,
   bold?: boolean,
   bolder?: boolean,
   size?: SizeTypes,
+  align?: string,
 } & RNTextProps;
 
 export const Text = ({
@@ -28,13 +31,16 @@ export const Text = ({
   style,
   color = Colors.blueGray600,
   italic,
+  centered,
   underline,
+  lineThrough,
   lighter,
   light,
   medium,
   bold,
   bolder,
   size = 'regular',
+  align = 'left',
   children,
   ...restProps
 }: TextProps) => {
@@ -44,8 +50,13 @@ export const Text = ({
       style={[
         styles.text,
         color && { color },
+        align && {
+          textAlign: align,
+        },
         italic && styles.italic,
+        centered && styles.center,
         underline && styles.underline,
+        lineThrough && styles.lineThrough,
         lighter && styles.lighter,
         light && styles.light,
         medium && styles.medium,
@@ -88,5 +99,11 @@ const styles = StyleSheet.create({
   },
   underline: {
     textDecorationLine: 'underline',
+  },
+  lineThrough: {
+    textDecorationLine: 'line-through',
+  },
+  center: {
+    textAlign: 'center',
   },
 });
