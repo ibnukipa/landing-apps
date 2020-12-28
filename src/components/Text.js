@@ -6,7 +6,7 @@
 import React, { Node } from 'react';
 import { Text as RNText, StyleSheet, TextProps as RNTextProps } from 'react-native';
 import type { SizeTypes } from '@constants/sizes';
-import Sizes from "@constants/sizes";
+import Sizes from '@constants/sizes';
 
 export type TextProps = {
   children: Node,
@@ -22,23 +22,21 @@ export type TextProps = {
   size?: SizeTypes,
 } & RNTextProps;
 
-const Text = (props: TextProps) => {
-  const {
-    onPress,
-    style,
-    color,
-    italic,
-    underline,
-    lighter,
-    light,
-    medium,
-    bold,
-    bolder,
-    size,
-    children,
-    ...restProps
-  } = props;
-
+export const Text = ({
+  onPress,
+  style,
+  color,
+  italic,
+  underline,
+  lighter,
+  light,
+  medium,
+  bold,
+  bolder,
+  size = 'regular',
+  children,
+  ...restProps
+}: TextProps) => {
   return (
     <RNText
       onPress={onPress}
@@ -91,5 +89,3 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
 });
-
-export default Text;
