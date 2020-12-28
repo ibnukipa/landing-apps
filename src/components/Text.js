@@ -14,6 +14,7 @@ export type TextProps = {
   style?: StyleSheet.Style,
   color?: string,
   italic?: boolean,
+  centered?: boolean,
   underline?: boolean,
   lighter?: boolean,
   light?: boolean,
@@ -28,6 +29,7 @@ export const Text = ({
   style,
   color = Colors.blueGray600,
   italic,
+  centered,
   underline,
   lighter,
   light,
@@ -45,6 +47,7 @@ export const Text = ({
         styles.text,
         color && { color },
         italic && styles.italic,
+        centered && styles.center,
         underline && styles.underline,
         lighter && styles.lighter,
         light && styles.light,
@@ -88,5 +91,8 @@ const styles = StyleSheet.create({
   },
   underline: {
     textDecorationLine: 'underline',
+  },
+  center: {
+    textAlign: 'center',
   },
 });

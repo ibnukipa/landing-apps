@@ -6,7 +6,6 @@
 import React, { Node } from 'react';
 import { StatusBar, View, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { KeyboardAware } from '@components/KeyboardAware';
 import Colors from '@constants/colors';
 
 type ContainerProps = {

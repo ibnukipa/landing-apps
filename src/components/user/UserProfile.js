@@ -16,13 +16,13 @@ export type ProfileProps = {
   description: string,
 };
 
-export const Profile = ({ name, description }: ProfileProps) => {
+export const UserProfile = ({ name, description }: ProfileProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.user}>
         <Icon name={'ios-person-circle'} size={'extraLarge'} color={Colors.blueGray400} />
         <View style={styles.userContent}>
-          <Text numberOfLines={1} bold size={'large'}>
+          <Text numberOfLines={1} color={Colors.black} bold size={'large'}>
             {name}
           </Text>
           <Text numberOfLines={1} size={'small'} color={Colors.blueGray400}>
@@ -32,7 +32,7 @@ export const Profile = ({ name, description }: ProfileProps) => {
       </View>
       <View style={styles.metadata}>
         <Label isLight text={'52.700 Points'} />
-        <Label isLight iconName={'attach-money'} iconType={'material'} text={'Rp. 100rb'} />
+        <Label isLight iconName={'attach-money'} iconType={'material'} text={'Rp 100rb'} />
         <Label isLight iconName={'wallet'} text={'PayLater'} />
       </View>
     </View>
