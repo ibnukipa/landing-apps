@@ -26,11 +26,66 @@ export const SUB_MENU = [
 ];
 
 export const NOTICE = [
-  { id: 1, title: 'COVID-19 Test & Other Requirements for Year-end Travels', position: 'end', align: 'right' },
+  {
+    id: 1,
+    title: 'COVID-19 Test & Other Requirements for Year-end Travels',
+    position: 'end',
+    align: 'right',
+  },
   { id: 2, title: 'Updated Information for Trains Trip' },
   { id: 3, title: 'Updated Information for Buses & Shuttle Trip', position: 'end' },
   { id: 4, title: 'Travel Credits: General Info & How to Redeem', align: 'right' },
   { id: 5, title: 'Your Refund & Reschedule Queries' },
   { id: 6, title: 'Latest Info on Xperience Bookings', position: 'end' },
   { id: 7, title: 'International Flight Routes Info', position: 'end', align: 'right' },
+];
+
+export const COVID_TEST = [
+  {
+    id: 1,
+    title: 'Soewarna Business Park - COVID19 Rapid/Antigen Swab Test',
+    tag: 'Antigen Test',
+    price: 'Starts from\nRp 200.000',
+  },
+  { id: 2, title: 'Klinik Fakhira', tag: 'Antigen Test', price: 'Starts from\nRp 250.000' },
+  { id: 3, title: 'Prodia', tag: 'Swab PCR', price: 'Starts from\nRp 1.025.000' },
+  {
+    id: 4,
+    title: 'RS Kartika - Pulo Mas - COVID19 PCR/Rapid Test',
+    tag: 'Antigen Test',
+    price: 'Starts from\nRp 150.000',
+  },
+  {
+    id: 5,
+    title: 'Venosan Clinic - Menteng - COVID19 Antigen Test',
+    tag: 'Antigen Test',
+    price: 'Starts from\nRp 490.000',
+  },
+  { id: 6, title: 'Klinik Kimia Farma', tag: 'Swab PCR', price: 'Starts from\nRp 900.000' },
+  {
+    id: 7,
+    title: 'RS Kartika - Pulo Mas - COVID19 PCR/Rapid Test',
+    tag: 'Antigen Test',
+    price: 'Starts from\nRp 150.000',
+  },
+  { id: 8, title: 'Klinik Fakhira', tag: 'Antigen Test', price: 'Starts from\nRp 250.000' },
+  { id: 9, title: 'Klinik Kimia Farma', tag: 'Swab PCR', price: 'Starts from\nRp 900.000' },
+  {
+    id: 10,
+    title: 'RS Kartika - Pulo Mas - COVID19 PCR/Rapid Test',
+    tag: 'Antigen Test',
+    price: 'Starts from\nRp 150.000',
+  },
+  {
+    id: 11,
+    title: 'Venosan Clinic - Menteng - COVID19 Antigen Test',
+    tag: 'Antigen Test',
+    price: 'Starts from\nRp 490.000',
+  },
+  {
+    id: 12,
+    title: 'Soewarna Business Park - COVID19 Rapid/Antigen Swab Test',
+    tag: 'Antigen Test',
+    price: 'Starts from\nRp 200.000',
+  },
 ];

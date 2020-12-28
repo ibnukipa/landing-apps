@@ -29,13 +29,15 @@ export const ItemsHorizontal = ({
   contentStyle,
 }: ItemsVerticalProps) => {
   return (
-    <View>
+    <View style={styles.container}>
       {header && (
         <View style={styles.header}>
-          <Text size={'larger'} medium color={Colors.black}>
+          <Text numberOfLines={1} size={'extraLarge'} medium color={Colors.black}>
             {header.title}
           </Text>
-          <Text color={Colors.blueGray400}>{header.description}</Text>
+          <Text numberOfLines={2} color={Colors.blueGray400}>
+            {header.description}
+          </Text>
         </View>
       )}
       <FlatList
@@ -54,6 +56,9 @@ export const ItemsHorizontal = ({
 };
 
 const styles = StyleSheet.create({
+  container: {
+    marginVertical: Sizes.regular,
+  },
   header: {
     paddingHorizontal: Sizes.large,
   },
