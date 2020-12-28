@@ -10,6 +10,7 @@ import { Text } from '@components/Text';
 import Sizes from '@constants/sizes';
 import { Divider } from '@components/Divider';
 import { Icon } from '@components/Icon';
+import { Touchable } from '@components/Touchable';
 
 type NewYearSnippetProps = {
   city: string,
@@ -23,7 +24,10 @@ export const ItemOverFullSnippet = ({ city, place, location }: NewYearSnippetPro
     return (windowDimensions.width - Sizes.large * 3) / 2;
   }, [windowDimensions]);
   return (
-    <View style={[styles.container, { width: snippetDimension(), height: snippetDimension() }]}>
+    <Touchable
+      onPress={() => {}}
+      style={[styles.container, { width: snippetDimension(), height: snippetDimension() }]}
+    >
       <View>
         <Text bold light size={'extraLarge'} color={Colors.white}>
           {city}
@@ -39,7 +43,7 @@ export const ItemOverFullSnippet = ({ city, place, location }: NewYearSnippetPro
           {location}
         </Text>
       </View>
-    </View>
+    </Touchable>
   );
 };
 

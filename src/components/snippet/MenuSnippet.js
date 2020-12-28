@@ -9,6 +9,7 @@ import { Icon } from '@components/Icon';
 import Colors from '@constants/colors';
 import { Text } from '@components/Text';
 import Sizes from '@constants/sizes';
+import { Touchable } from '@components/Touchable';
 
 type MenuSnippetProps = {
   id: string,
@@ -31,7 +32,7 @@ export const MenuSnippet = ({
   const [itemDimension] = useState(width / countPerRow);
   const [iconDimension] = useState(width / countPerRow - Sizes.small * 3);
   return (
-    <View style={[styles.container, { width: itemDimension }]}>
+    <Touchable onPress={() => {}} style={[styles.container, { width: itemDimension }]}>
       <View style={styles.content}>
         <View
           style={[
@@ -45,7 +46,7 @@ export const MenuSnippet = ({
           {name}
         </Text>
       </View>
-    </View>
+    </Touchable>
   );
 };
 

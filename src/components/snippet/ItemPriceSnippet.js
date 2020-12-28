@@ -12,6 +12,7 @@ import { Icon } from '@components/Icon';
 import { Divider } from '@components/Divider';
 import Spaces from '@constants/spaces';
 import { PriceTag } from '@components/PriceTag';
+import { Touchable } from '@components/Touchable';
 
 type CovidTestSnippetProps = {
   title?: string,
@@ -29,7 +30,7 @@ export const ItemPriceSnippet = ({
   saved,
 }: CovidTestSnippetProps) => {
   return (
-    <View style={styles.container}>
+    <Touchable onPress={() => {}} style={styles.container}>
       <View style={[styles.image]}>
         <Icon color={Colors.blueGray} />
         {saved && <PriceTag value={saved} />}
@@ -63,7 +64,7 @@ export const ItemPriceSnippet = ({
           {price}
         </Text>
       )}
-    </View>
+    </Touchable>
   );
 };
 

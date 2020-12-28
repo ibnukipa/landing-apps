@@ -4,11 +4,12 @@
  */
 
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Icon } from '@components/Icon';
 import Colors from '@constants/colors';
 import { Text } from '@components/Text';
 import Sizes from '@constants/sizes';
+import { Touchable } from '@components/Touchable';
 
 type MenuSecondarySnippetProps = {
   icon: string,
@@ -17,12 +18,12 @@ type MenuSecondarySnippetProps = {
 
 export const MenuSecondarySnippet = ({ name, icon }: MenuSecondarySnippetProps) => {
   return (
-    <View style={[styles.container]}>
+    <Touchable onPress={() => {}} style={[styles.container]}>
       <Icon name={icon} color={Colors.blueGray700} />
       <Text size={'small'} light color={Colors.black} centered>
         {name}
       </Text>
-    </View>
+    </Touchable>
   );
 };
 

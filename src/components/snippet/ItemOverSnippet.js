@@ -8,6 +8,7 @@ import { StyleSheet, View } from 'react-native';
 import Colors from '@constants/colors';
 import { Text } from '@components/Text';
 import Sizes from '@constants/sizes';
+import { Touchable } from '@components/Touchable';
 
 type NoticeSnippetProps = {
   title: string,
@@ -21,11 +22,14 @@ export const ItemOverSnippet = ({
   align = 'left',
 }: NoticeSnippetProps) => {
   return (
-    <View style={[styles.container, { justifyContent: `flex-${position}` }]}>
+    <Touchable
+      onPress={() => {}}
+      style={[styles.container, { justifyContent: `flex-${position}` }]}
+    >
       <Text bold align={align} light color={Colors.black}>
         {title}
       </Text>
-    </View>
+    </Touchable>
   );
 };
 
