@@ -9,7 +9,7 @@ import Sizes from '@constants/sizes';
 import Colors from '@constants/colors';
 import { Icon } from '@components/Icon';
 import { Text } from '@components/Text';
-import { Touchable } from "@components/Touchable";
+import { Touchable } from '@components/Touchable';
 
 type LabelProps = {
   text: string,
