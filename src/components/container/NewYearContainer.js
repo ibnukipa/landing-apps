@@ -6,7 +6,7 @@
 import React, { useCallback } from 'react';
 import { NEW_YEAR } from '@constants/dummy';
 import { ItemsGrid } from '@components/ItemsGrid';
-import { NewYearSnippet } from '@components/snippet/NewYearSnippet';
+import { ItemOverFullSnippet } from '@components/snippet/ItemOverFullSnippet';
 import Sizes from '@constants/sizes';
 import Colors from '@constants/colors';
 
@@ -15,7 +15,7 @@ type NewYearContainerProps = {};
 export const NewYearContainer = ({}: NewYearContainerProps) => {
   const renderItemKey = useCallback((item) => item.id.toString(), []);
   const renderItem = useCallback(
-    ({ item }) => <NewYearSnippet city={item.city} place={item.place} location={item.location} />,
+    ({ item }) => <ItemOverFullSnippet city={item.city} place={item.place} location={item.location} />,
     []
   );
   return (

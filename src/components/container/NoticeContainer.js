@@ -5,7 +5,7 @@
 
 import React, { useCallback } from 'react';
 import { ItemsHorizontal } from '@components/ItemsHorizontal';
-import { NoticeSnippet } from '@components/snippet/NoticeSnippet';
+import { ItemOverSnippet } from '@components/snippet/ItemOverSnippet';
 import { NOTICE } from '@constants/dummy';
 import Sizes from '@constants/sizes';
 
@@ -14,7 +14,7 @@ type MenuContainerProps = {};
 export const NoticeContainer = ({}: MenuContainerProps) => {
   const renderItemKey = useCallback((item) => item.id.toString(), []);
   const renderItem = useCallback(
-    ({ item }) => <NoticeSnippet title={item.title} position={item.position} align={item.align} />,
+    ({ item }) => <ItemOverSnippet title={item.title} position={item.position} align={item.align} />,
     []
   );
   return (

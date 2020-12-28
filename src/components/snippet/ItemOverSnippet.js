@@ -15,7 +15,7 @@ type NoticeSnippetProps = {
   align: string,
 };
 
-export const NoticeSnippet = ({
+export const ItemOverSnippet = ({
   title,
   position = 'start',
   align = 'left',

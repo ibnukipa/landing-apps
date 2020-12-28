@@ -5,12 +5,8 @@
 
 import React from 'react';
 import { FlatList, View, StyleSheet } from 'react-native';
-import { Text } from '@components/Text';
 import Sizes from '@constants/sizes';
-import Colors from '@constants/colors';
-import { Divider } from '@components/Divider';
-import { Icon } from '@components/Icon';
-import { ItemsHeader } from "@components/ItemsHeader";
+import { ItemsHeader } from '@components/ItemsHeader';
 
 type ItemsGridProps = {
   items: Array<{ title: string, description: string }>,

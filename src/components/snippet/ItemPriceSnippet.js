@@ -18,7 +18,7 @@ type CovidTestSnippetProps = {
   price: string,
 };
 
-export const CovidTestSnippet = ({ title, tag, price }: CovidTestSnippetProps) => {
+export const ItemPriceSnippet = ({ title, tag, price }: CovidTestSnippetProps) => {
   return (
     <View style={styles.container}>
       <View style={[styles.image]}>

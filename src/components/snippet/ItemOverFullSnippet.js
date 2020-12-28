@@ -17,7 +17,7 @@ type NewYearSnippetProps = {
   location: string,
 };
 
-export const NewYearSnippet = ({ city, place, location }: NewYearSnippetProps) => {
+export const ItemOverFullSnippet = ({ city, place, location }: NewYearSnippetProps) => {
   const windowDimensions = useWindowDimensions();
   const snippetDimension = useCallback(() => {
     return (windowDimensions.width - Sizes.large * 3) / 2;

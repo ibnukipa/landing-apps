@@ -7,14 +7,14 @@ import React, { useCallback } from 'react';
 import { ItemsHorizontal } from '@components/ItemsHorizontal';
 import { COVID_TEST } from '@constants/dummy';
 import Sizes from '@constants/sizes';
-import { CovidTestSnippet } from '@components/snippet/CovidTestSnippet';
+import { ItemPriceSnippet } from '@components/snippet/ItemPriceSnippet';
 
 type CovidTestContainerProps = {};
 
 export const CovidTestContainer = ({}: CovidTestContainerProps) => {
   const renderItemKey = useCallback((item) => item.id.toString(), []);
   const renderItem = useCallback(
-    ({ item }) => <CovidTestSnippet title={item.title} price={item.price} tag={item.tag} />,
+    ({ item }) => <ItemPriceSnippet title={item.title} price={item.price} tag={item.tag} />,
     []
   );
   return (
