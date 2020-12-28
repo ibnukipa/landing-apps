@@ -8,28 +8,30 @@ import { FlatList, View, StyleSheet } from 'react-native';
 import { Text } from '@components/Text';
 import Sizes from '@constants/sizes';
 import Colors from '@constants/colors';
-import { Divider } from '@components/Divider';
+import { Divider } from "@components/Divider";
 
-type ItemsVerticalProps = {
+type ItemsGridProps = {
   items: Array<{ title: string, description: string }>,
   keyExtractor: Function,
   renderItem: Function,
-  contentStyle?: StyleSheet.style,
+  backgroundColor?: string,
   header?: {
     title: string,
     description: string,
   },
+  contentStyle?: StyleSheet.style,
 };
 
-export const ItemsHorizontal = ({
+export const ItemsGrid = ({
   items,
   renderItem,
+  backgroundColor,
   keyExtractor,
   header,
   contentStyle,
-}: ItemsVerticalProps) => {
+}: ItemsGridProps) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor }]}>
       {header && (
         <View style={styles.header}>
           <Text numberOfLines={1} size={'extraLarge'} medium color={Colors.black}>
@@ -42,7 +44,7 @@ export const ItemsHorizontal = ({
         </View>
       )}
       <FlatList
-        horizontal
+        numColumns={2}
         removeClippedSubviews={false}
         showsHorizontalScrollIndicator={false}
         data={items}
@@ -50,7 +52,6 @@ export const ItemsHorizontal = ({
         renderItem={renderItem}
         onEndReachedThreshold={0.9}
         contentContainerStyle={contentStyle}
-        ItemSeparatorComponent={() => <Divider horizontal />}
       />
     </View>
   );
@@ -62,6 +63,6 @@ const styles = StyleSheet.create({
   },
   header: {
     paddingHorizontal: Sizes.large,
-    marginBottom: Sizes.smaller,
+    marginBottom: Sizes.small,
   },
 });

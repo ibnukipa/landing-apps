@@ -24,17 +24,27 @@ export const CovidTestSnippet = ({ title, tag, price }: CovidTestSnippetProps) =
       <View style={[styles.image]}>
         <Icon color={Colors.blueGray} />
       </View>
-      <Text numberOfLines={2} bold size={'large'}>
-        {title}
-      </Text>
-      <Divider space={Spaces.extraSmall} />
-      <Text numberOfLines={1} size={'small'}>
-        {tag}
-      </Text>
-      <Divider space={Spaces.extraSmall} />
-      <Text numberOfLines={2} bold size={'large'} color={Colors.orange900}>
-        {price}
-      </Text>
+      {title && (
+        <>
+          <Text numberOfLines={2} bold size={'large'}>
+            {title}
+          </Text>
+          <Divider space={Spaces.extraSmall} />
+        </>
+      )}
+      {tag && (
+        <>
+          <Text numberOfLines={1} size={'small'}>
+            {tag}
+          </Text>
+          <Divider space={Spaces.extraSmall} />
+        </>
+      )}
+      {price && (
+        <Text numberOfLines={2} bold size={'large'} color={Colors.orange900}>
+          {price}
+        </Text>
+      )}
     </View>
   );
 };

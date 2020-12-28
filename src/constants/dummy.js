@@ -89,3 +89,10 @@ export const COVID_TEST = [
     price: 'Starts from\nRp 200.000',
   },
 ];
+
+export const NEW_YEAR = [
+  { id: 1, city: 'Bandung', place: 'Ethereal Lake', location: 'White Crater' },
+  { id: 2, city: 'Padang', place: 'Azure Sky', location: 'PDKIM Padang Panjang' },
+  { id: 3, city: 'Surabaya', place: 'Watch Sunsets', location: 'Kenjeran Beach' },
+  { id: 4, city: 'Semarang', place: 'To City Square', location: 'Sam Poo Kong Tample' },
+]

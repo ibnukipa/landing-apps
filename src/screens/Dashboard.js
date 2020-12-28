@@ -12,8 +12,9 @@ import { UserProfile } from '@components/user/UserProfile';
 import { MenuContainer } from '@components/container/MenuContainer';
 import { MenuSecondaryContainer } from '@components/container/MenuSecondaryContainer';
 import { NoticeContainer } from '@components/container/NoticeContainer';
-import { CovidTestContainer } from "@components/container/CovidTestContainer";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { CovidTestContainer } from '@components/container/CovidTestContainer';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { NewYearContainer } from '@components/container/NewYearContainer';
 
 export const Dashboard = () => {
   const insets = useSafeAreaInsets();
@@ -21,13 +22,15 @@ export const Dashboard = () => {
     <Container hasHeader content={'light'}>
       <Header hasSearch />
       <ScrollView
-        contentContainerStyle={{paddingBottom: insets.bottom}}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: insets.bottom }}
       >
         <UserProfile name={faker.name.findName()} description={faker.name.jobTitle()} />
         <MenuContainer />
         <MenuSecondaryContainer />
         <NoticeContainer />
         <CovidTestContainer />
+        <NewYearContainer />
       </ScrollView>
     </Container>
   );
