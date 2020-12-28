@@ -12,7 +12,7 @@ export type TouchableProps = {
   onPress?: Function,
 } & TouchableOpacityProps;
 
-const Touchable = ({ children, onPress, ...restProps }: TouchableProps) => (
+export const Touchable = ({ children, onPress, ...restProps }: TouchableProps) => (
   <TouchableOpacity
     disabled={!onPress}
     activeOpacity={onPress ? 0.75 : 1}
@@ -30,5 +30,3 @@ const Touchable = ({ children, onPress, ...restProps }: TouchableProps) => (
     {children}
   </TouchableOpacity>
 );
-
-export default Touchable;

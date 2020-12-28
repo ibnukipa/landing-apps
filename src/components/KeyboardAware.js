@@ -11,7 +11,7 @@ export type KeyboardAwareProps = {
   children: Node,
 };
 
-const KeyboardAware = (props: KeyboardAwareProps) => {
+export const KeyboardAware = (props: KeyboardAwareProps) => {
   const [isKeyboardOpened, setIsKeyboardOpened] = useState(false);
   useEffect(() => {
     Keyboard.addListener('keyboardDidShow', keyboardShow);
@@ -41,5 +41,3 @@ const KeyboardAware = (props: KeyboardAwareProps) => {
     </KeyboardAwareScrollView>
   );
 };
-
-export default KeyboardAware;
